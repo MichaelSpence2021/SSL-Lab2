@@ -28,7 +28,7 @@ class intelDataset(Dataset):
             image_paths = [path + '/' + st for st in os.listdir(path)]
             for image in image_paths:
                 class_index = category_map[class_name]
-                y_value = torch.zeros(6)
+                y_value = torch.zeros(3)
                 y_value[class_index] = 1
                 train_y.append(y_value)
                 img = load_img(image)
